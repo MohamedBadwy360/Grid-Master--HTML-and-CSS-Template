@@ -1,0 +1,579 @@
+/* fonts */
+@import url("fonts.css");
+/* Global Styles */
+:root {
+  /* colors */
+  --section-background-color: #f7f8f9;
+  --heading-color: #333;
+  --grey-color: #9fa3a7;
+  --white-color: #fff;
+  --yellow-color: #ffc80a;
+  --light-green-color: #7bc424;
+  --sky-color: #27b9c2;
+  --light-orange: #f05638;
+  /* fonts */
+  --arvo-regular: "Arvo-Regular";
+  --arvo-bold: "Arvo-Bold";
+  --montserrat-bold: "Montserrat-Bold";
+  --open-sans-regular: "OpenSans-Regular";
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--open-sans-regular);
+}
+h2 {
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
+img {
+  vertical-align: middle;
+}
+.arvo-regular {
+  font-family: var(--arvo-regular);
+}
+.arvo-bold {
+  font-family: var(--arvo-bold);
+}
+.montserrat-bold {
+  font-family: var(--montserrat-bold);
+}
+.open-sans-regular {
+  font-family: var(--open-sans-regular);
+}
+.section-background {
+  background-color: var(--section-background-color);
+}
+.text-center {
+  text-align: center;
+}
+.special-heading {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--grey-color);
+  letter-spacing: 0.125rem;
+  font-family: var(--montserrat-bold);
+}
+/* start how-to-use section */
+main {
+  display: grid;
+  grid-template-rows: repeat(10, auto);
+  grid-template-areas:
+    "how-to-use"
+    "iphone-6s"
+    "keyboard"
+    "controller"
+    "imac-retina"
+    "connect-twitter"
+    "best-choice"
+    "icloud"
+    "popular-section"
+    "vision";
+}
+@media (min-width: 480px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(3, 1fr) repeat(4, auto);
+    grid-template-areas:
+      "how-to-use how-to-use"
+      "iphone-6s iphone-6s"
+      "keyboard controller"
+      "imac-retina imac-retina"
+      "connect-twitter icloud"
+      "best-choice icloud"
+      "popular-section popular-section"
+      "vision vision";
+  }
+}
+@media (min-width: 992px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr) 0.5fr;
+    grid-template-areas:
+      "iphone-6s iphone-6s how-to-use how-to-use"
+      "keyboard imac-retina imac-retina icloud"
+      "controller best-choice best-choice icloud"
+      "connect-twitter popular-section vision vision";
+  }
+}
+.how-to-use {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-area: how-to-use;
+  padding-block: 3.125rem;
+
+  h1 {
+    margin-block: 1.25rem 0.625rem;
+    color: var(--heading-color);
+    font-size: 10vw;
+    line-height: 1.4em;
+    max-width: 34.375rem;
+  }
+  a {
+    color: var(--sky-color);
+    text-decoration: underline;
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 480px) {
+  .how-to-use {
+    h1 {
+      font-size: 2.1875rem;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .how-to-use {
+    padding: 0;
+    h1 {
+      font-size: 3rem;
+      line-height: 3.75rem;
+    }
+  }
+}
+/* end how-to-use section */
+/* start iphone-6s section */
+.iphone-6s {
+  padding: 2.5rem 1rem 0;
+  grid-area: iphone-6s;
+
+  .iphone-6s-content {
+    width: 90%;
+    margin: auto;
+    h2 {
+      margin-block: 0.625rem 1.25rem;
+    }
+    p:last-of-type {
+      color: var(--grey-color);
+      font-size: 0.875rem;
+    }
+  }
+  img {
+    margin-top: 2.5rem;
+    margin-inline: auto;
+    width: 249px;
+    max-width: 100%;
+    position: relative;
+    left: -4%;
+    display: block;
+  }
+}
+@media (min-width: 480px) {
+  .iphone-6s {
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .iphone-6s-content {
+      width: 32%;
+      margin: 0;
+    }
+    img {
+      margin-inline: 0;
+      left: 0;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .iphone-6s {
+    img {
+      width: 258px;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .iphone-6s {
+    img {
+      width: 260px;
+    }
+  }
+}
+/* end iphone-6s section */
+/* start keyboard section */
+.keyboard {
+  padding-block: 2.5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--light-orange);
+  grid-area: keyboard;
+
+  img {
+    width: 319px;
+    max-width: 100%;
+  }
+  h2 {
+    margin-top: 0.625rem;
+    color: var(--white-color);
+    max-width: 230px;
+  }
+  a {
+    margin-top: 1.25rem;
+    color: var(--yellow-color);
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+/* end keyboard section */
+/* start controller section */
+.controller {
+  grid-area: controller;
+  background-color: var(--section-background-color);
+  padding-block: 1.875rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  img {
+    width: 248px;
+    max-width: 100%;
+    position: relative;
+    left: -7%;
+  }
+  h2 {
+    margin-block: 0.625rem 1.25rem;
+    width: 54%;
+  }
+  a {
+    margin-top: 1.25rem;
+    color: var(--sky-color);
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+}
+/* end controller section */
+/* start imac-retina section */
+.imac-retina {
+  padding-top: 4.25rem;
+  padding-right: 4%;
+  padding-left: 4%;
+  padding-bottom: 3.125rem;
+  overflow: hidden;
+  grid-area: imac-retina;
+
+  .imac-retina-block1 {
+    margin-bottom: 2.125rem;
+
+    h2 {
+      margin-top: 0.625rem;
+    }
+    img {
+      margin-top: 2.5rem;
+      width: 200%;
+      position: relative;
+      left: -115%;
+    }
+  }
+  .imac-retina-block2 {
+    p {
+      color: var(--grey-color);
+      font-size: 0.875rem;
+      line-height: 1.625rem;
+    }
+    a {
+      font-size: 0.75rem;
+      margin-top: 1.25rem;
+      letter-spacing: 0.15rem;
+      color: var(--sky-color);
+      text-transform: uppercase;
+      font-weight: bold;
+      display: inline-block;
+    }
+  }
+}
+@media (min-width: 480px) {
+  .imac-retina {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 0;
+
+    .imac-retina-block1 {
+      width: 50%;
+      max-width: 11.25rem;
+      margin-bottom: 0;
+
+      h2 {
+        margin-bottom: 0.4063rem;
+      }
+      img {
+        margin-bottom: 0;
+        width: 257%;
+        left: -165%;
+        margin-top: 1.25rem;
+      }
+    }
+    .imac-retina-block2 {
+      width: 40%;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .imac-retina {
+    .imac-retina-block1 {
+      img {
+        width: 277%;
+        left: -180%;
+      }
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .imac-retina {
+    .imac-retina-block1 {
+      img {
+        width: 290%;
+        left: -190%;
+      }
+    }
+  }
+}
+/* end imac-retina section */
+/* start connect-twitter section */
+.connect-twitter {
+  background-color: #38d5f4;
+  color: var(--white-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: connect-twitter;
+
+  .connect-twitter-content {
+    width: 15rem;
+    height: 15rem;
+    background-color: #35cfed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    padding-inline: 2.125rem;
+
+    img {
+      width: 2.7188rem;
+      max-width: 100%;
+    }
+    h2 {
+      margin-top: 0.625rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+/* end connect-twitter section */
+/* end better-experience section */
+.best-choice {
+  padding-top: 1.875rem;
+  background-image: url("../images/better-experience-background.png");
+  background-position: center bottom;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-color: #93b6b7;
+  position: relative;
+  color: var(--white-color);
+  grid-area: best-choice;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  span {
+    background-color: var(--light-orange);
+    display: inline-block;
+    padding-inline: 0.625rem;
+    padding-block: 0.3rem;
+    border-radius: 0.3125rem;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    position: absolute;
+    left: 1.875rem;
+    top: 1.25rem;
+  }
+  h2 {
+    max-width: 280px;
+    margin: auto;
+    padding-block: 1.9375rem;
+  }
+  img {
+    width: 90%;
+    max-width: 100%;
+    position: relative;
+    left: -7%;
+  }
+}
+/* end better-experience section */
+/* start icloud section */
+.icloud {
+  overflow: hidden;
+  background-color: #8f76bc;
+  padding: 1.875rem 5% 4.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--white-color);
+  grid-area: icloud;
+
+  .circle {
+    background-color: #8166b0;
+    border-radius: 50%;
+    width: 23.3125rem;
+    height: 23.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .popular {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.4rem;
+      background-color: rgba(255, 255, 255, 0.08);
+      padding: 0.125rem 0.8125rem 0.0625rem 0.8125rem;
+      border-radius: 3.75rem;
+
+      img {
+        width: 0.75rem;
+      }
+      span {
+        font-size: 0.625rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        line-height: 1.4375rem;
+        font-weight: 700;
+      }
+    }
+    > img {
+      margin-top: 1.25rem;
+      width: 239px;
+      max-width: 100%;
+      position: relative;
+      left: -0.5rem;
+    }
+    > span {
+      font-size: 0.75rem;
+      letter-spacing: 0.125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  > h2 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    margin-block: 1.25rem 0.625rem;
+  }
+  > p {
+    width: 80%;
+    max-width: 18.125rem;
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+  }
+  > a {
+    color: #000;
+    margin-top: 1.875rem;
+    padding: 0.875rem 1.75rem;
+    background-color: var(--yellow-color);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+/* end icloud section */
+/* start popular section */
+.popular-section {
+  padding-block: 1.875rem;
+  background-color: var(--section-background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  grid-area: popular-section;
+
+  span {
+    background-color: var(--light-green-color);
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    padding-inline: 0.625rem;
+    border-radius: 0.3125rem;
+  }
+  h2 {
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  .popular-section {
+    padding-block: 0;
+  }
+}
+/* end popular section */
+/* start vision section */
+.vision {
+  overflow: hidden;
+  background-color: #2c2c2c;
+  color: var(--white-color);
+  padding-inline: 5%;
+  padding-bottom: 1.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-area: vision;
+
+  img {
+    width: 16.9375rem;
+    max-width: 100%;
+    position: relative;
+    left: -15%;
+    margin-bottom: -7%;
+  }
+  h2 {
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
+  }
+}
+@media (min-width: 480px) {
+  .vision {
+    flex-direction: row;
+    padding-bottom: 0;
+
+    img {
+      margin-bottom: 0;
+    }
+    h2 {
+      width: 34%;
+      text-align: left;
+    }
+  }
+}
+/* end vision section */

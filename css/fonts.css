@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Arvo-Bold";
+  src: url("../webfonts/Arvo.woff2") format("woff2"),
+    url("../webfonts/Arvo-Bold.woff") format("woff"),
+    url("../webfonts/Arvo-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Arvo-Regular";
+  src: url("../webfonts/Arvo.woff2") format("woff2"),
+    url("../webfonts/Arvo.woff") format("woff"),
+    url("../webfonts/Arvo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../webfonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../webfonts/Montserrat-Bold.woff") format("woff"),
+    url("../webfonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  src: url("../webfonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../webfonts/OpenSans-Regular.woff") format("woff"),
+    url("../webfonts/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
